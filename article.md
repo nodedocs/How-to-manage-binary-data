@@ -30,15 +30,21 @@ In the wild, buffers are usually seen in the context of binary data coming from 
 
 There are a few ways to create new buffers:
 
-    var buffer = new Buffer(8);
+```javascript
+var buffer = new Buffer(8);
+```
 
 This buffer is uninitialized and contains 8 bytes.
 
-    var buffer = new Buffer([ 8, 6, 7, 5, 3, 0, 9]);
+```javascript
+var buffer = new Buffer([ 8, 6, 7, 5, 3, 0, 9]);
+```
 
 This initializes the buffer to the contents of this array. Keep in mind that the contents of the array are integers representing bytes.
 
-    var buffer = new Buffer("I'm a string!", "utf-8")
+```javascript
+var buffer = new Buffer("I'm a string!", "utf-8")
+```
 
 This initializes the buffer to a binary encoding of the first string as specified by the second argument (in this case, utf-8). **utf-8** is by far the most common encoding used with node, but `Buffer` also supports:
 
